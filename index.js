@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("login-form");
 
     loginForm.addEventListener("submit", (event) => {
-        event.preventDefault();
+        event.preventDefault(); // Prevent the form from submitting the traditional way
 
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
         if (validateForm(username, password)) {
             console.log("Form Submitted");
-            // Add your login logic here (e.g., AJAX request to the server)
+            // Redirect to index.html after validation
+            window.location.href = "index.html";
         }
     });
 
